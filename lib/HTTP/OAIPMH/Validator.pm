@@ -91,7 +91,7 @@ sub new {
         # Repository features extracted
         'granularity' => 'days',    # can also be "seconds"
         'uses_503' => 0,            # set true if 503 responses ever used
-        'uses_https' => 0,          # set to true if https is ever used
+        'uses_https' => 1,          # set to true if https is ever used
         # Control
         'debug' => 0,
         'parser' => XML::DOM::Parser->new(),
@@ -101,7 +101,7 @@ sub new {
         'doc' => undef,             # current parsed xml document
         'save_all_responses' => 0,  # set True to save all HTTP responses
         'response_number' => 1,     # initial response number
-        'http_timeout' => 600,
+        'http_timeout' => 1200,
         'max_retries' => 5,         # number of 503's in a row that we will accept
         'max_size' => 100000000,    # max response size in bytes (100MB)
         'protocol' => 'http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm',   #URL of protocol spec
